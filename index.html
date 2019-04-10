@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- Bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+
+    <section class="app-sec">
+        <div class="container-fluid">
+            <div class="row" style="min-height: 500px;">
+                <div class="col-md-4 col-input">
+                    <h1>Job Traker</h1>
+                    <form>
+                        <label>Company</label>
+                        <input id="company" type="text" placeholder="Company Name">
+                        <label>Phone</label>
+                        <input id="phone" type="text" placeholder="Phone Number">
+                        <label>Website</label>
+                        <input id="website" type="text" placeholder="Wesite">
+                        <label>Adress</label>
+                        <input id="address" type="text" placeholder="Address">
+                        <label>Date Applied</label>
+                        <input id="date" type="date" placeholder="Date">
+                        <label>Role</label>
+                        <textarea></textarea>
+                        <label>Pay</label>
+                        <input id="pay" type="text" placeholder="Amount">
+                        <button id="submit">Submit</button>
+                    </form>
+                </div>
+                <div id='col-results' class="col-md-8 col-results">
+                    <div id="company-sec">
+                            <h2>Campany</h2> <span class="pay">$28.00</span>
+                                <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="result-sec">
+                                                <p>Phone:</p>
+                                                <span id="result">000-000-0000</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="result-sec">
+                                                <p>Website:</p>
+                                                <span id="result">www.website.com</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="result-sec">
+                                                <p>Date Applied:</p>
+                                                 <span id="result">12/19/19</span>
+                                            </div>
+                                        </div>
+                                </div>
+                                <div class="row role">
+                                    <div class="col-md-12">
+                                        <div class="result-sec">
+                                                <p>Role</p>
+                                                <span id="role">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+<script src="assets/js/main.js"></script>
+
+ <!-- Bootstrap scritp -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html>
