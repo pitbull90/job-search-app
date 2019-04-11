@@ -1,75 +1,98 @@
 // Input section variables
-let company = document.getElementById('company');
+let inputCompany = document.getElementById('company');
 let phone = document.getElementById('phone');
 let address = document.getElementById('address');
 let date = document.getElementById('date');
 let pay = document.getElementById('pay');
+let websiteInput = document.getElementById('website');
+let roleInput = document.getElementById('role');
 let button = document.getElementById('submit');
 let colResults = document.getElementById('col-results');
+let inputForm = document.getElementById('inputcontact');
+
 
 // All information Array
-let companyInfo = [];
+let companyArr = [];
 
-    var companyObj = new Object();
-    companyObj.companyArr = {'company': [{'companyName': company.value}, {'phone': phone.value}, {'address': address.value}, {'date': date.value}, {'pay': pay.value}]}
 
-companyInfo.push(companyObj); 
+inputForm.addEventListener('submit', function(e){
 
-// Submit button click EventListener
-button.addEventListener('click', (e) => {
     e.preventDefault();
 
-    companyMaker();
-    company.value = '';
+    var companyText = inputCompany.value ;
+    var phoneText = phone.value ;
+    var addressText = address.value ;
+    var dateText = date.value ;
+    var payText = pay.value;
+    var websiteText = website.value;
+    var roleText = roleInput.value;
+
+    
+let companyInfo = {companyName: companyText, phone: phoneText , website: websiteText, address: addressText, dateApplied: dateText, role: roleText, pay: payText}
+
+companyArr.push(companyInfo)
+
+if(companyText === ' ' && phoneText === ' ' && addressText === ' ' && dateText === ' ' && payText === ' ' && websiteText === ' ' && roleText === ' ' ){
+    button.addEventListener('click',function(){
+
+    });
+} else {
+    addItems(companyText,phoneText,addressText,dateText,payText,websiteText,roleText);
+    
+    inputCompany.value = '';
+    phone.value = '';
+    address.value = '';
+    date.value = '';
     pay.value = '';
-})
+    website.value = '';
+    role.value = '';
 
+}
 
-// CompanyMaker function that runs to creates the company section results
-let companyMaker = () => {
+});
 
-    
+function addItems(companyText,phoneText,addressText,dateText,payText,websiteText,roleText) {
 
-    // Creates company section that shows all the results.
-    let companySection = document.createElement('div');
+    const div = document.createElement('div');
+    div.classList.add('company-sec')
+    div.innerHTML = `
+    <h2>${companyText}</h2> <span class="pay">${payText}</span>
+        <div class="row">
+                <div class="col-md-4">
+                    <div class="result-sec">
+                        <p>Phone:</p>
+                        <span id="result">${phoneText}</span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="result-sec">
+                        <p>Website:</p>
+                        <span id="result">${websiteText}</span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="result-sec">
+                        <p>Date Applied:</p>
+                         <span id="result">${dateText}</span>
+                    </div>
+                </div>
+        </div>
+        <div class="row">
+        <div class="col-md-12">
+                <div class="result-sec">
+            <p>Address</p>
+            <span id="address">${addressText} </span>
+            </div>
+        </div>
+    </div>
+        <div class="row role">
+            <div class="col-md-12">
+                <div class="result-sec">
+                        <p>Role</p>
+                        <span id="role">${roleText}</span>
+                </div>
+            </div>
+        </div>`;
 
-    // Create company name and pay results elements
-    let companyName = document.createElement('h2');
-    let companyPay = document.createElement('span');
-    // Gives pay span the class of pay
-    companyPay.classList.add('pay');
-    // Add content to name and pay
-    companyName.textContent = company.value;
-    companyPay.textContent = pay.value;
-
-    // Create the two rows that have the remaining info
-    if ( phone.value > 0 ) {
-        var fourColumns = document.createElement('div');
-        fourColumns.setAttribute('class', 'col-md-4');
-
-        // Creates the phone results
-        let resultSec = document.createElement('div');
-        resultSec.setAttribute('class', 'result-sec');
-        fourColumns.appendChild(resultSec);
-        let phoneLabel = document.createElement('p');
-        resultSec.appendChild(phoneLabel);
-        phoneLabel.textContent = 'Phone:';
-
-        let phoneSpan = document.createElement('span');
-        phoneSpan.setAttribute('id', 'phone');
-        resultSec.appendChild(phoneSpan);
-        phoneSpan.textContent = phone.value;
-
-        
-    };
-
-    let infoRow1 = document.createElement('div');
-    infoRow1.appendChild(fourColumns);
-    infoRow1.classList.add('row');
-    
-    
-    // Set Attribute to companySection and append the company name and pay
-    companySection.setAttribute('id', 'company-sec');
-    colResults.appendChild(companySection);
-    companySection.append(companyName, companyPay, infoRow1);
+colResults.appendChild(div);
 }
