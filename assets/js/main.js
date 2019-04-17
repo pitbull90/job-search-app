@@ -12,7 +12,9 @@ let inputForm = document.getElementById('inputcontact');
 
 
 // All information Array
-let companyArr = [];
+// let companyArr = [];
+
+let companyInfo = [];
 
 
 inputForm.addEventListener('submit', function(e){
@@ -30,7 +32,13 @@ inputForm.addEventListener('submit', function(e){
     
 let companyInfo = {companyName: companyText, phone: phoneText , website: websiteText, address: addressText, dateApplied: dateText, role: roleText, pay: payText}
 
-companyArr.push(companyInfo)
+// let companyInfo = localStorage.getItem('companyArr') ? JSON.parse(localStorage.getItem('companyArr')) : [] ;
+
+localStorage.setItem('companyArr', JSON.stringify(companyInfo));
+
+let storage = JSON.parse(localStorage.getItem('companyArr'));
+
+// companyArr.push(companyInfo)
 
 if(companyText === ' ' && phoneText === ' ' && addressText === ' ' && dateText === ' ' && payText === ' ' && websiteText === ' ' && roleText === ' ' ){
     button.addEventListener('click',function(){
