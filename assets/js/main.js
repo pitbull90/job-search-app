@@ -17,7 +17,7 @@ let inputForm = document.getElementById('inputcontact');
 let companyInfo = [];
 
 
-inputForm.addEventListener('submit', function(e){
+inputForm.addEventListener('submit', (e) => {
 
     e.preventDefault();
 
@@ -41,7 +41,7 @@ let storage = JSON.parse(localStorage.getItem('companyArr'));
 // companyArr.push(companyInfo)
 
 if(companyText === ' ' && phoneText === ' ' && addressText === ' ' && dateText === ' ' && payText === ' ' && websiteText === ' ' && roleText === ' ' ){
-    button.addEventListener('click',function(){
+    button.addEventListener('click', () => {
 
     });
 } else {
@@ -59,7 +59,7 @@ if(companyText === ' ' && phoneText === ' ' && addressText === ' ' && dateText =
 
 });
 
-function addItems(companyText,phoneText,addressText,dateText,payText,websiteText,roleText) {
+function addItems(companyText, phoneText, addressText, dateText, payText, websiteText, roleText) {
 
     const div = document.createElement('div');
     div.classList.add('company-sec')
