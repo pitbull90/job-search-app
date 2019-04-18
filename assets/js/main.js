@@ -64,43 +64,61 @@ function addItems(companyText, phoneText, addressText, dateText, payText, websit
     const div = document.createElement('div');
     div.classList.add('company-sec')
     div.innerHTML = `
-    <h2>${companyText}</h2> <span class="pay">${payText}</span>
-        <div class="row">
-                <div class="col-md-4">
-                    <div class="result-sec">
-                        <p>Phone:</p>
-                        <span id="result">${phoneText}</span>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="result-sec">
-                        <p>Website:</p>
-                        <span id="result">${websiteText}</span>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="result-sec">
-                        <p>Date Applied:</p>
-                         <span id="result">${dateText}</span>
-                    </div>
-                </div>
-        </div>
-        <div class="row">
-        <div class="col-md-12">
-                <div class="result-sec">
-            <p>Address</p>
-            <span id="address">${addressText} </span>
-            </div>
-        </div>
-    </div>
-        <div class="row role">
-            <div class="col-md-12">
-                <div class="result-sec">
-                        <p>Role</p>
-                        <span id="role">${roleText}</span>
-                </div>
-            </div>
-        </div>`;
+        
+        <div class="accordion" id="accordionExample">
+
+                            <div class="card">
+                                <div class="card-header" id="headingOne">
+                                     <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                     <h2>${companyText}</h2> <span class="pay">${payText}</span>
+                                    </button>
+                                </div>
+
+                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                                <div class="row">
+                                                        <div class="col-md-4">
+                                                            <div class="result-sec">
+                                                                <p>Phone:</p>
+                                                                <span id="result">${phoneText}</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="result-sec">
+                                                                <p>Website:</p>
+                                                                <span id="result">${websiteText}</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="result-sec">
+                                                                <p>Date Applied:</p>
+                                                                <span id="result">${dateText}</span>
+                                                            </div>
+                                                        </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                            <div class="result-sec">
+                                                        <p>Address</p>
+                                                        <span id="address">${addressText} </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row role">
+                                                    <div class="col-md-12">
+                                                        <div class="result-sec">
+                                                                <p>Role</p>
+                                                                <span id="role">${roleText}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                    </div> 
+                            </div>
+
+                        </div>
+        
+        `;
 
 colResults.appendChild(div);
 }
