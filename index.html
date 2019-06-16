@@ -1,63 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
 
     <!-- Bootstrap -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
 
-    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Varela+Round"
+      rel="stylesheet"
+    />
 
-    <link rel="stylesheet" href="assets/css/styles.css">
-</head>
-<body>
-
-
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
     <section class="app-sec">
-        <div class="container-fluid">
-            <div class="row" style="min-height: 500px;">
-                <div class="col-md-4 col-input">
-                    <h1>Job Traker</h1>
-                    <form id="inputcontact">
-                        <label>Company</label>
-                        <input id="company" type="text" placeholder="Company Name">
-                        <label>Phone</label>
-                        <input id="phone" type="text" placeholder="Phone Number">
-                        <label>Website</label>
-                        <input id="website" type="text" placeholder="Wesite">
-                        <label>Adress</label>
-                        <input id="address" type="text" placeholder="Address">
-                        <label>Date Applied</label>
-                        <input id="date" type="date" placeholder="Date">
-                        <label>Role</label>
-                        <textarea id="role"></textarea>
-                        <label>Pay</label>
-                        <input id="pay" type="text" placeholder="Amount">
-                        <button id="submit">Submit</button>
-                    </form>
-                </div>
-                <div id='col-results' class="col-md-8 col-results">
-                    
-                </div>
-            </div>
+      <div class="container-fluid">
+        <div class="row" style="min-height: 500px;">
+          <div class="col-md-4 col-input">
+            <h1>Job Traker</h1>
+            <form id="inputcontact">
+              <label>Company</label>
+              <input id="company" type="text" placeholder="Company Name" />
+              <label>Phone</label>
+              <input id="phone" type="text" placeholder="Phone Number" />
+              <label>Website</label>
+              <input id="website" type="text" placeholder="Wesite" />
+              <label>Adress</label>
+              <input id="address" type="text" placeholder="Address" />
+              <label>Date Applied</label>
+              <input id="date" type="date" placeholder="Date" />
+              <label>Role</label>
+              <textarea id="role"></textarea>
+              <label>Pay</label>
+              <input id="pay" type="text" placeholder="Amount" />
+              <button id="submit">Submit</button>
+            </form>
+          </div>
+          <div id="col-results" class="col-md-8 col-results"></div>
         </div>
+      </div>
     </section>
-    
 
-<script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js"></script>
 
- <!-- Bootstrap scritp -->
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- Bootstrap scritp -->
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
 
-<!-- Bootstrap JQuery CDN -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<!-- Bootstrap cloudflare-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <!-- Bootstrap JQuery CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Bootstrap cloudflare-->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
 
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
-</body>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
